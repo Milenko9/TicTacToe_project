@@ -5,16 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tic Tac Toe</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
 
+    <!-- Intro section -->
+    <div class="intro">
+      <div class="xo-header">
+        <h1>xo</h1>
+      </div>
+
+      <div class="pick-player-section">
+        <div class="pick-player">
+          <h2>Pick player 1's mark</h2>
+        </div>
+        <div class="choose-x-o">
+          <div class="chooseX">
+            <p>x</p>
+          </div>
+          <div class="chooseO active">
+            <p>o</p>
+          </div>
+        </div>
+        <div class="reminder">
+          <p>Remember : x goes first</p>
+        </div>
+      </div>
+
+      <button id="vsCpu">New game (vs cpu)</button>
+      <button id="vsPlayer">New game (vs player)</button>
+    </div>
+    <!-- Intro section END -->
 
 
 
+    <div class="box"></div>
 
 
+    <!-- JS -->
     <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>

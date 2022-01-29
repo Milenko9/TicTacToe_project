@@ -1,0 +1,77 @@
+.intro {
+  width: 400px;
+  margin: 50px auto;
+  .xo-header {
+    height: 70px;
+    text-align: center;
+    h1 {
+      color: $o-color;
+      font-size: 44px;
+      &::first-letter{
+        color: $x-color;
+      }
+    }
+  }
+  .pick-player-section {
+    height: 200px;
+    background-color: $fields-color;
+    border-radius: 15px;
+    border-bottom: 7px solid #262f2f;
+    margin-bottom: 20px;
+    .pick-player {
+      height: 60px;
+      color: #ddd;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 60px;
+      font-size: 11px;
+    }
+    .choose-x-o {
+      width: 90%;
+      height: 80px;
+      margin: 0 auto;
+      background-color: $body-color;
+      border-radius: 10px;
+      .chooseX, .chooseO {
+        width: 50%;
+        height: 80px;
+        float: left;
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .active {
+        background-color: $lightgrey-color;
+        border-radius: 10px;
+        color: $body-color;
+      }
+    }
+    .reminder {
+      height: 60px;
+      text-transform: uppercase;
+      color: #414f57;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+  button {
+    width: 400px;
+    height: 50px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  #vsCpu {
+    background-color: $o-color;
+    border-bottom: 7px solid orange;
+  }
+  #vsPlayer {
+    background-color: $x-color;
+    border-bottom: 7px solid #268999;
+  }
+}

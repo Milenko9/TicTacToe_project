@@ -1,0 +1,91 @@
+.intro {
+  width: 400px;
+  margin: 50px auto; }
+  .intro .xo-header {
+    height: 70px;
+    text-align: center; }
+    .intro .xo-header h1 {
+      color: #fac818;
+      font-size: 44px; }
+      .intro .xo-header h1::first-letter {
+        color: cadetblue; }
+  .intro .pick-player-section {
+    height: 200px;
+    background-color: #202123;
+    border-radius: 15px;
+    border-bottom: 7px solid #262f2f;
+    margin-bottom: 20px; }
+    .intro .pick-player-section .pick-player {
+      height: 60px;
+      color: #ddd;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 60px;
+      font-size: 11px; }
+    .intro .pick-player-section .choose-x-o {
+      width: 90%;
+      height: 80px;
+      margin: 0 auto;
+      background-color: #000018;
+      border-radius: 10px; }
+      .intro .pick-player-section .choose-x-o .chooseX, .intro .pick-player-section .choose-x-o .chooseO {
+        width: 50%;
+        height: 80px;
+        float: left;
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        font-weight: bold; }
+      .intro .pick-player-section .choose-x-o .active {
+        background-color: lightgrey;
+        border-radius: 10px;
+        color: #000018; }
+    .intro .pick-player-section .reminder {
+      height: 60px;
+      text-transform: uppercase;
+      color: #414f57;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bold;
+      font-size: 14px; }
+  .intro button {
+    width: 400px;
+    height: 50px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold; }
+  .intro #vsCpu {
+    background-color: #fac818;
+    border-bottom: 7px solid orange; }
+  .intro #vsPlayer {
+    background-color: cadetblue;
+    border-bottom: 7px solid #268999; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #000018;
+  font-family: 'Open Sans', sans-serif; }
+  body .box {
+    width: 400px;
+    margin: 50px auto;
+    display: none; }
+    body .box .xo {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      margin: 16px;
+      float: left;
+      border: 1px solid #eee;
+      background: cadetblue;
+      box-sizing: border-box;
+      font-size: 44px;
+      color: white;
+      text-align: center;
+      font-weight: bold; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,31 @@
+@import "partials/variables";
+@import "partials/intro";
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: $body-color;
+  font-family: 'Open Sans', sans-serif;
+
+  .box {
+    width: 400px;
+    margin: 50px auto;
+    display: none;
+    .xo {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      margin: 16px;
+      float: left;
+      border: 1px solid #eee;
+      background: cadetblue;
+      box-sizing: border-box;
+      font-size: 44px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
