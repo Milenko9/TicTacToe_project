@@ -1,0 +1,87 @@
+.game-section-container {
+  width: 400px;
+  margin: 50px auto;
+  border: 1px solid red;
+  .info-game-section {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    .xo-icons {
+      width: 33.3%;
+      h3 {
+        color: $o-color;
+        font-size: 44px;
+        margin-left: 16px;
+        &::first-letter {
+          color: $x-color;
+        }
+      }
+    }
+    .turn-info {
+      width: 33.3%;
+      .turn-info-css {
+        height: 35px;
+        width: 70%;
+        margin: 17px auto;
+        background-color: $fields-color;
+        border-radius: 10px;
+        border-bottom: 3px solid #262f2f;
+        box-sizing: border-box;
+        h4 {
+          color: #ddd;
+          font-size: 26px;
+          font-weight: bold;
+          float: left;
+          padding: 0 10px 0 20px;
+          line-height: 28px;
+        }
+        p {
+          color: #ddd;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 10px;
+          float:left;
+          line-height: 34px;
+        }
+      }
+    }
+    .restart-button {
+      width: 33.3%;
+      button {
+        width: 35px;
+        height: 35px;
+        background-color: $lightgrey-color;
+        border: none;
+        border-radius: 5px;
+        border-bottom: 3px solid grey;
+        float: right;
+        margin-top: 16px;
+        margin-right: 16px;
+        img {
+          max-width: 60%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .game-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .xo {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      margin: 16px;
+      background: $fields-color;
+      box-sizing: border-box;
+      font-size: 44px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 15px;
+      border-bottom: 7px solid #262f2f;
+    }
+  }
+}

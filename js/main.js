@@ -1,4 +1,4 @@
-var box = document.querySelector('.box');
+var gameSectionDiv = document.querySelector('.game-section');
 
 createTable();
 
@@ -25,7 +25,7 @@ function createTable() {
   for (var i = 0; i < 9; i++) {
     text += '<div class="xo"></div>';
   }
-  box.innerHTML = text;
+  gameSectionDiv.innerHTML = text;
 }
 
 function insertSymbol() {

@@ -63,6 +63,80 @@
     background-color: cadetblue;
     border-bottom: 7px solid #268999; }
 
+.game-section-container {
+  width: 400px;
+  margin: 50px auto;
+  border: 1px solid red; }
+  .game-section-container .info-game-section {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; }
+    .game-section-container .info-game-section .xo-icons {
+      width: 33.3%; }
+      .game-section-container .info-game-section .xo-icons h3 {
+        color: #fac818;
+        font-size: 44px;
+        margin-left: 16px; }
+        .game-section-container .info-game-section .xo-icons h3::first-letter {
+          color: cadetblue; }
+    .game-section-container .info-game-section .turn-info {
+      width: 33.3%; }
+      .game-section-container .info-game-section .turn-info .turn-info-css {
+        height: 35px;
+        width: 70%;
+        margin: 17px auto;
+        background-color: #202123;
+        border-radius: 10px;
+        border-bottom: 3px solid #262f2f;
+        box-sizing: border-box; }
+        .game-section-container .info-game-section .turn-info .turn-info-css h4 {
+          color: #ddd;
+          font-size: 26px;
+          font-weight: bold;
+          float: left;
+          padding: 0 10px 0 20px;
+          line-height: 28px; }
+        .game-section-container .info-game-section .turn-info .turn-info-css p {
+          color: #ddd;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 10px;
+          float: left;
+          line-height: 34px; }
+    .game-section-container .info-game-section .restart-button {
+      width: 33.3%; }
+      .game-section-container .info-game-section .restart-button button {
+        width: 35px;
+        height: 35px;
+        background-color: lightgrey;
+        border: none;
+        border-radius: 5px;
+        border-bottom: 3px solid grey;
+        float: right;
+        margin-top: 16px;
+        margin-right: 16px; }
+        .game-section-container .info-game-section .restart-button button img {
+          max-width: 60%;
+          height: 100%; }
+  .game-section-container .game-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .game-section-container .game-section .xo {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      margin: 16px;
+      background: #202123;
+      box-sizing: border-box;
+      font-size: 44px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 15px;
+      border-bottom: 7px solid #262f2f; }
+
 * {
   padding: 0;
   margin: 0; }
@@ -70,22 +144,5 @@
 body {
   background-color: #000018;
   font-family: 'Open Sans', sans-serif; }
-  body .box {
-    width: 400px;
-    margin: 50px auto;
-    display: none; }
-    body .box .xo {
-      width: 100px;
-      height: 100px;
-      line-height: 100px;
-      margin: 16px;
-      float: left;
-      border: 1px solid #eee;
-      background: cadetblue;
-      box-sizing: border-box;
-      font-size: 44px;
-      color: white;
-      text-align: center;
-      font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */
