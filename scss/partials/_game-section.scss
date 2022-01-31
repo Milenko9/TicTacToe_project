@@ -1,7 +1,7 @@
 .game-section-container {
   width: 400px;
   margin: 50px auto;
-  border: 1px solid red;
+  display: none;
   .info-game-section {
     height: 70px;
     display: flex;
@@ -82,6 +82,37 @@
       font-weight: bold;
       border-radius: 15px;
       border-bottom: 7px solid #262f2f;
+    }
+  }
+  .results-info {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .result1, .resultTie, .result2 {
+      width: 100px;
+      height: 70px;
+      margin: 16px;
+      border-radius: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      p {
+        padding-top: 15px;
+      }
+      p > span {
+        font-size: 17px;
+      }
+    }
+    .result1 {
+      background-color: $x-color;
+    }
+    .resultTie {
+      background-color: $lightgrey-color;
+    }
+    .result2 {
+      background-color: $o-color;
     }
   }
 }

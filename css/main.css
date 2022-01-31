@@ -56,6 +56,8 @@
     border-radius: 15px;
     text-transform: uppercase;
     font-weight: bold; }
+    .intro button:hover {
+      cursor: pointer; }
   .intro #vsCpu {
     background-color: #fac818;
     border-bottom: 7px solid orange; }
@@ -66,7 +68,7 @@
 .game-section-container {
   width: 400px;
   margin: 50px auto;
-  border: 1px solid red; }
+  display: none; }
   .game-section-container .info-game-section {
     height: 70px;
     display: flex;
@@ -136,6 +138,30 @@
       font-weight: bold;
       border-radius: 15px;
       border-bottom: 7px solid #262f2f; }
+  .game-section-container .results-info {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .game-section-container .results-info .result1, .game-section-container .results-info .resultTie, .game-section-container .results-info .result2 {
+      width: 100px;
+      height: 70px;
+      margin: 16px;
+      border-radius: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px; }
+      .game-section-container .results-info .result1 p, .game-section-container .results-info .resultTie p, .game-section-container .results-info .result2 p {
+        padding-top: 15px; }
+      .game-section-container .results-info .result1 p > span, .game-section-container .results-info .resultTie p > span, .game-section-container .results-info .result2 p > span {
+        font-size: 17px; }
+    .game-section-container .results-info .result1 {
+      background-color: cadetblue; }
+    .game-section-container .results-info .resultTie {
+      background-color: lightgrey; }
+    .game-section-container .results-info .result2 {
+      background-color: #fac818; }
 
 * {
   padding: 0;
