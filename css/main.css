@@ -137,7 +137,8 @@
       text-align: center;
       font-weight: bold;
       border-radius: 15px;
-      border-bottom: 7px solid #262f2f; }
+      border-bottom: 7px solid #262f2f;
+      cursor: pointer; }
   .game-section-container .results-info {
     height: 100px;
     display: flex;
