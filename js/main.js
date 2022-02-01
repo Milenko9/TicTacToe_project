@@ -10,10 +10,9 @@ let result1Div = document.querySelector('.result1');
 let resultTieDiv = document.querySelector('.resultTie');
 let result2Div = document.querySelector('.result2');
 let chooseXODiv = document.querySelector('.choose-x-o');
-// let gameBox = document.querySelectorAll('.xo');
+let turnInfoDiv = document.querySelector('.turn-info-css');
 let pl1;
 let pl2;
-// let symbol = '';
 
 
 chooseX.addEventListener('click', pl1X);
@@ -49,9 +48,12 @@ function startingGame() {
       introDiv.style.display = 'block';
       gameSecConDiv.style.display = 'none';
       alert("Morate izabrati X ili O");
-    } else {
+    } else if (pl1 === 'x') {
       result1Div.innerHTML = '<p>'+pl1+' (you)<br><span>11</span></p>';
       result2Div.innerHTML = '<p>'+pl2+' (cpu)<br><span>11</span></p>';
+    } else if (pl2 === 'x') {
+      result1Div.innerHTML = '<p>'+pl2+' (cpu)<br><span>11</span></p>';
+      result2Div.innerHTML = '<p>'+pl1+' (you)<br><span>11</span></p>';
     }
   }
 
@@ -62,9 +64,12 @@ function startingGame() {
       introDiv.style.display = 'block';
       gameSecConDiv.style.display = 'none';
       alert("Morate izabrati X ili O");
-    } else {
+    } else if (pl1 === 'x') {
       result1Div.innerHTML = '<p>'+pl1+' (player 1)<br><span>11</span></p>';
       result2Div.innerHTML = '<p>'+pl2+' (player 2)<br><span>11</span></p>';
+    } else if (pl2 === 'x') {
+      result1Div.innerHTML = '<p>'+pl2+' (player 1)<br><span>11</span></p>';
+      result2Div.innerHTML = '<p>'+pl1+' (player 2)<br><span>11</span></p>';
     }
   }
 }
@@ -72,7 +77,7 @@ function startingGame() {
 
 
 var boxes = document.querySelectorAll('.xo');
-var symbol = "O";
+var symbol = "";
 var lines = [
   [boxes[0],boxes[1],boxes[2]],
   [boxes[3],boxes[4],boxes[5]],
@@ -96,11 +101,13 @@ function createTable() {
   gameSectionDiv.innerHTML = text;
 }
 
+
 function insertSymbol() {
   (symbol == "O")? symbol = "X" : symbol = "O";
   this.innerHTML = symbol;
   checkLines();
 }
+
 
 function checkLines() {
   for (let i = 0; i < lines.length; i++) {
