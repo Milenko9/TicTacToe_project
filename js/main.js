@@ -1,24 +1,74 @@
-var vsCpuBtn = document.querySelector('#vsCpu');
-var vsPlayerBtn = document.querySelector('#vsPlayer');
-var introDiv = document.querySelector('.intro');
-var gameSecConDiv = document.querySelector('.game-section-container');
-var gameSectionDiv = document.querySelector('.game-section');
+let vsCpuBtn = document.querySelector('#vsCpu');
+let vsPlayerBtn = document.querySelector('#vsPlayer');
+let introDiv = document.querySelector('.intro');
+let gameSecConDiv = document.querySelector('.game-section-container');
+let gameSectionDiv = document.querySelector('.game-section');
+let restartBtn = document.querySelector('.restart-button');
+let chooseO = document.querySelector('.chooseO');
+let chooseX = document.querySelector('.chooseX');
+let result1Div = document.querySelector('.result1');
+let resultTieDiv = document.querySelector('.resultTie');
+let result2Div = document.querySelector('.result2');
+let chooseXODiv = document.querySelector('.choose-x-o');
+let pl1;
+let pl2;
 
-vsCpuBtn.addEventListener('click', playVsCpu);
-vsPlayerBtn.addEventListener('click', playVsPlayer);
 
-function playVsCpu() {
-  introDiv.style.display = 'none';
-  gameSecConDiv.style.display = 'block';
+chooseX.addEventListener('click', pl1X);
+chooseO.addEventListener('click', pl1O);
+restartBtn.addEventListener('click', () => { document.location.reload(); });
+
+
+function pl1X() {
+  chooseX.classList.add('active');
+  chooseO.classList.remove('active');
+  pl1 = 'x';
+  pl2 = 'o';
 }
 
-function playVsPlayer() {
-  introDiv.style.display = 'none';
-  gameSecConDiv.style.display = 'block';
+function pl1O() {
+  chooseO.classList.add('active');
+  chooseX.classList.remove('active');
+  pl1 = 'o';
+  pl2 = 'x';
 }
+
+startingGame();
+
+function startingGame() {
+  vsCpuBtn.addEventListener('click', playVsCpu);
+  vsPlayerBtn.addEventListener('click', playVsPlayer);
+
+  function playVsCpu() {
+    introDiv.style.display = 'none';
+    gameSecConDiv.style.display = 'block';
+    if (pl1 === undefined || pl2 === undefined) {
+      introDiv.style.display = 'block';
+      gameSecConDiv.style.display = 'none';
+      alert("Morate izabrati X ili O");
+    } else {
+      result1Div.innerHTML = '<p>'+pl1+' (you)<br><span>11</span></p>';
+      result2Div.innerHTML = '<p>'+pl2+' (cpu)<br><span>11</span></p>';
+    }
+  }
+
+  function playVsPlayer() {
+    introDiv.style.display = 'none';
+    gameSecConDiv.style.display = 'block';
+    if (pl1 === undefined || pl2 === undefined) {
+      introDiv.style.display = 'block';
+      gameSecConDiv.style.display = 'none';
+      alert("Morate izabrati X ili O");
+    } else {
+      result1Div.innerHTML = '<p>'+pl1+' (player 1)<br><span>11</span></p>';
+      result2Div.innerHTML = '<p>'+pl2+' (player 2)<br><span>11</span></p>';
+    }
+  }
+}
+
+
 
 createTable();
-
 
 function createTable() {
   var text = '';
@@ -27,8 +77,6 @@ function createTable() {
   }
   gameSectionDiv.innerHTML = text;
 }
-
-
 
 
 
