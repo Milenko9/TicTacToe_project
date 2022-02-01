@@ -13,6 +13,9 @@ let chooseXODiv = document.querySelector('.choose-x-o');
 let turnInfoDiv = document.querySelector('.turn-info-css');
 let pl1;
 let pl2;
+let resX = 0;
+let resO = 0;
+let resTie = 0;
 
 
 chooseX.addEventListener('click', pl1X);
@@ -49,12 +52,13 @@ function startingGame() {
       gameSecConDiv.style.display = 'none';
       alert("Morate izabrati X ili O");
     } else if (pl1 === 'x') {
-      result1Div.innerHTML = '<p>'+pl1+' (you)<br><span>11</span></p>';
-      result2Div.innerHTML = '<p>'+pl2+' (cpu)<br><span>11</span></p>';
+      result1Div.innerHTML = '<p>'+pl1+' (you)<br><span>'+resX+'</span></p>';
+      result2Div.innerHTML = '<p>'+pl2+' (cpu)<br><span>'+resO+'</span></p>';
     } else if (pl2 === 'x') {
-      result1Div.innerHTML = '<p>'+pl2+' (cpu)<br><span>11</span></p>';
-      result2Div.innerHTML = '<p>'+pl1+' (you)<br><span>11</span></p>';
+      result1Div.innerHTML = '<p>'+pl2+' (cpu)<br><span>'+resX+'</span></p>';
+      result2Div.innerHTML = '<p>'+pl1+' (you)<br><span>'+resO+'</span></p>';
     }
+    resultTieDiv.innerHTML = '<p>ties<br><span>'+resTie+'</span></p>';
   }
 
   function playVsPlayer() {
@@ -65,14 +69,15 @@ function startingGame() {
       gameSecConDiv.style.display = 'none';
       alert("Morate izabrati X ili O");
     } else if (pl1 === 'x') {
-      result1Div.innerHTML = '<p>'+pl1+' (player 1)<br><span>11</span></p>';
-      result2Div.innerHTML = '<p>'+pl2+' (player 2)<br><span>11</span></p>';
+      result1Div.innerHTML = '<p>'+pl1+' (player 1)<br><span>'+resX+'</span></p>';
+      result2Div.innerHTML = '<p>'+pl2+' (player 2)<br><span>'+resO+'</span></p>';
     } else if (pl2 === 'x') {
-      result1Div.innerHTML = '<p>'+pl2+' (player 1)<br><span>11</span></p>';
-      result2Div.innerHTML = '<p>'+pl1+' (player 2)<br><span>11</span></p>';
+      result1Div.innerHTML = '<p>'+pl2+' (player 1)<br><span>'+resX+'</span></p>';
+      result2Div.innerHTML = '<p>'+pl1+' (player 2)<br><span>'+resO+'</span></p>';
     }
   }
 }
+
 
 
 
@@ -89,9 +94,11 @@ var lines = [
   [boxes[2],boxes[4],boxes[6]]
 ];
 
+
 for (var i = 0; i < boxes.length; i++) {
   boxes[i].addEventListener('click',insertSymbol)
 }
+
 
 function createTable() {
   var text = '';
@@ -104,6 +111,7 @@ function createTable() {
 
 function insertSymbol() {
   (symbol == "O")? symbol = "X" : symbol = "O";
+  
   this.innerHTML = symbol;
   checkLines();
 }
